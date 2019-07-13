@@ -3,8 +3,8 @@
 #### 当然，既然说了免费，当然可以免费！这里就要感谢谷歌提供的GCP服务（Google Cloud Platform，谷歌云平台服务），首次注册激活GCP，你会获享12个月试用期和$300 赠金，是不是免费？
 
 > 请注意：教程很详细，图很多！
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-3e55062cb5b2e046.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![111.png](http://note.youdao.com/yws/res/17912/WEBRESOURCEcf8a4c155e4776b02778f386f6e00ec0)
 
 ### 首先你需要准备：
 - ##### 谷歌账号以及能访问谷歌站点的一台电脑（首先你要能登录谷歌GCP）
@@ -18,7 +18,8 @@
 - ##### 点击右上角免费试用
 - ##### 国家/地区可以选择香港，点击继续，登录谷歌账户
 
-![image](http://note.youdao.com/yws/res/17669/EA11520BE44943639A5C2F4C137B4041)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-0f289586017de207.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - ##### 填写个人信息和信用卡信息
 > 账户类型记得选个人
@@ -27,21 +28,25 @@
 
 > 谷歌声称“我们要求您提供信用卡信息是为了确认您不是机器人。除非您手动升级为付费帐号，否则我们不会向您收费。”具体信息可以参考：https://www.youtube.com/watch?v=kJHKsOywfxE
 
-![2.png](http://note.youdao.com/yws/res/17691/WEBRESOURCE0051efca03d10ac59495171ed65de45a)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-6f5d7505f043f8e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - 激活成功之后你会看到如下界面，并且会有提示$300美金和12个月免费试用期。
 
-![3.png](http://note.youdao.com/yws/res/17702/WEBRESOURCE1f9736fd2126a8081f15dbb3d0d955c0)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-e6e4c5ef0859c943.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 ### 2. 创建VM虚拟机实例
 - ##### 左侧导航栏选择 计算 ---> Computer Engine ---> VM实例
 
-![4.png](http://note.youdao.com/yws/res/17717/WEBRESOURCE505b34392fc9f2709b10829c537537c7)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-beb08e67ca2e1208.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - 等待 Compute Engine 启用完成后，点击创建，开始自定义实例配置
 
-![5.png](http://note.youdao.com/yws/res/17724/WEBRESOURCE2b8d4b75ea367ec7206caf71e18c7c31)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-58c2f8a0671579ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
     - 填写 名称
@@ -49,47 +54,54 @@
     - 调整一下 内核 及 内存，选择最低共享配置即可满足
     - 更改 启动磁盘 为 Ubuntu 18.04 LTS
 
-![6.png](http://note.youdao.com/yws/res/17744/WEBRESOURCEdaf8003c7c42980750ba814755d51354)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-231b189aec5ca336.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 防火墙勾选 允许 HTTP 流量 允许 HTTPS 流量
     - 点击 创建，创建完成如下图。
 
-![7.png](http://note.youdao.com/yws/res/17750/WEBRESOURCEb0cfa68573cad4366553e8c718d50c39)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-fc648b2d0ecd9efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 ### 3. 设置防火墙规则
 - ##### 左侧菜单栏 ---> 网络 ---> VPC网络 ---> 防火墙规则
 
-![8.png](http://note.youdao.com/yws/res/17767/WEBRESOURCE9f9f951ce95dca8dcda9897a4ad1ba2e)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-1ac2eedd6a4ff2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - ##### 点击创建防火墙规则
 
-![9.png](http://note.youdao.com/yws/res/17770/WEBRESOURCE5983d7b9fa3d7d01b1b2f67fe801f77c)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-aa3dd936a69e6a41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 名称 按规则自定义
     - 目标 选择  网络中的所有实例
 
-![10.png](http://note.youdao.com/yws/res/17778/WEBRESOURCEc5d4a0d79c4c80d42299585458ed5c8e)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-5d41f378dfb3395b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 来源ip地址范围 0.0.0.0/0
     - 协议和端口 勾选 UDP 填写 500,4500，勾选 其他协议 填写 esp
     - 点击 创建，创建成功，如下图
     
-![12.png](http://note.youdao.com/yws/res/17782/WEBRESOURCEcbf181d06b51b7354fd8ed4b7953046e)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-b43da8aa33a5e5d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ### 4. 配置VPC网络
 
-![13.png](http://note.youdao.com/yws/res/17789/WEBRESOURCE33b74e09e416a9c1582518a6de4520ff)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-799f487ff32edc0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 左侧菜单栏 ---> 网络 ---> VPC网络 ---> default
 
 
-![14.png](http://note.youdao.com/yws/res/17793/WEBRESOURCE3f29453aa17b48fc81a9697ee2288408)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-c8c9e22bcc877f46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
     - 点击修改
     
-![15.png](http://note.youdao.com/yws/res/17795/WEBRESOURCEc72b513a21c695bdbf00c826750e40b8)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-1b6096f064ffd3c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
     
     - 子网创建模式 选择 自动
     - 动态路由模式 选择 全局
@@ -97,37 +109,40 @@
 
 ### 5. 设置 负载平衡
 
-![16.png](http://note.youdao.com/yws/res/17804/WEBRESOURCEdd61e3c456c4156dfbb7f446ac1135e6)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-d6e66d86c453a9e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - ##### 左侧菜单栏 ---> 网络 ---> 负载平衡
 - ##### 点击创建负载平衡
 - ##### 直接点击继续
 
 
-![17.png](http://note.youdao.com/yws/res/17811/WEBRESOURCE3c541fd82ebde41fb16b91ab541bfc2d) 
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-7fa29253d5a82bd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 名称 按规则自定义填写
     - 选择 区域
     - 选择第一步所创建的VM实例
     - 点击前端配置
 
-![18.png](http://note.youdao.com/yws/res/17821/WEBRESOURCEcf35dcbafcbbe15a2a0f8e1c49b9bee4)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-e1b59226515f0105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
     - 名称 按规则自定义填写
     - 端口 填写500-4500
     - 点击 完成 
     - 点击 创建，创建完成如下
 
-![19.png](http://note.youdao.com/yws/res/17825/WEBRESOURCE52f47094487531fec8dc158c594d50f5)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-3300af570f79a367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 6. 登录服务器
 - ##### 导航菜单 → Compute Engine → VM实例
 
-![20.png](http://note.youdao.com/yws/res/17830/WEBRESOURCE7ec67b2fc7c3373971f2c2d14a2009a1)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-73b3b2990d84fac5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - ##### 点击 SSH，会进入到远程终端页面
 
-![21.png](http://note.youdao.com/yws/res/17836/WEBRESOURCE4776fdf64f4fa7ed27dac82b2384d756)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-123683109b120909.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ### 7. 开始部署VPN服务
@@ -190,7 +205,8 @@ VPN_PASSWORD='密码' sh vpnsetup.sh
     
 ###### 需要等待大概5-10分钟后，控制台输出
 
-![22.png](http://note.youdao.com/yws/res/17884/WEBRESOURCEdecae4fe5644af60870fcdb727e736e3)
+![image.png](https://upload-images.jianshu.io/upload_images/1424124-120f954ac1d1aa26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 > 详细部署VPN服务教程可参考：[IPsec VPN 服务器一键安装脚本](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/README-zh.md#重要提示)
 
