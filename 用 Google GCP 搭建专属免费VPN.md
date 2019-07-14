@@ -1,10 +1,9 @@
 ## 用 Google GCP 搭建专属免费VPS
 
-### 郑重申明：本文用于记录、总结、分享云服务器自行搭建VPN的过程及方法。如将其作用于违反法律法规的事情，与本人无关。
+### 郑重申明：本文用于记录、总结、分享云服务器自行搭建VPS的过程及方法。如将其作用于违反法律法规的事情，与本人无关。
 
 ## 简介
-#### 切入正题，原理是租一个国外的服务器 --->这个服务器上搭建自己的VPN ---> 通过这个VPN。
-#### 当然，既然说了免费，当然可以免费！这里就要感谢谷歌提供的GCP服务（Google Cloud Platform，谷歌云平台服务），首次注册激活GCP，你会获享12个月试用期和$300 赠金，是不是免费？
+#### 感谢谷歌提供的GCP服务（Google Cloud Platform，谷歌云平台服务），首次注册激活GCP，你会获享12个月试用期和$300 赠金，是不是免费？
 
 > 请注意：教程很详细，图很多！
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-3e55062cb5b2e046.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -149,7 +148,7 @@
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-123683109b120909.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-### 7. 开始部署VPN服务
+### 7. 开始部署服务
 
 - ##### 执行以下命令
 ```
