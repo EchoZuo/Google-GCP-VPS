@@ -237,9 +237,10 @@ zuoqianheng@instance-1:~$
 
 ## Info
 - Github：https://github.com/EchoZuo
-- Email: zuoqianheng@foxmail.com || QQ: 615125175
-- 简书：@EchoZuo
+- Email: zuoqianheng@foxmail.com
 - CSDN:https://blog.csdn.net/zuoqianheng
+- 简书：@EchoZuo
+- 电报：@echozuo
 
 ## 参考链接
 
