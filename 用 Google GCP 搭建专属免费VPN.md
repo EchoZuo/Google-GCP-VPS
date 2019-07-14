@@ -1,18 +1,17 @@
 ## 用 Google GCP 搭建专属免费VPS
 
-### 郑重申明：本文用于记录、总结、分享云服务器自行搭建VPS的过程及方法。如将其作用于违反法律法规的事情，与本人无关。
+### 郑重申明：本文用于记录、总结、分享云服务器自行搭建VPS的过程及方法。如将其作用于违反法律法规的事情，与本人无关。请遵守当地法律法规。
+
 
 ## 简介
-#### 感谢谷歌提供的GCP服务（Google Cloud Platform，谷歌云平台服务），首次注册激活GCP，你会获享12个月试用期和$300 赠金，是不是免费？
+#### 感谢谷歌提供的GCP服务（[Google Cloud Platform，谷歌云平台服务](https://cloud.google.com)），首次注册激活GCP，你会获享12个月试用期和$300 赠金，是不是免费？
 
 > 请注意：教程很详细，图很多！
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-3e55062cb5b2e046.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 ### 首先你需要准备：
 - ##### 谷歌账号以及能访问谷歌站点的一台电脑（首先你要能登录谷歌GCP）
 - ##### 外币卡（VISA、Mastercard、AE）（实测招行VISA全币种卡可以）
-
 
 
 ## 开始搭建
@@ -23,7 +22,6 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-0f289586017de207.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 - ##### 填写个人信息和信用卡信息
 > 账户类型记得选个人
 
@@ -33,11 +31,9 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-6f5d7505f043f8e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 - 激活成功之后你会看到如下界面，并且会有提示$300美金和12个月免费试用期。
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-e6e4c5ef0859c943.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 
 ### 2. 创建VM虚拟机实例
@@ -45,12 +41,9 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-beb08e67ca2e1208.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 - 等待 Compute Engine 启用完成后，点击创建，开始自定义实例配置
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-58c2f8a0671579ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
 
     - 填写 名称
     - 选择 区域 及 地区（日本站点距离近，响应速度快）
@@ -59,12 +52,10 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-231b189aec5ca336.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
     - 防火墙勾选 允许 HTTP 流量 允许 HTTPS 流量
     - 点击 创建，创建完成如下图。
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-fc648b2d0ecd9efb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 
 ### 3. 设置防火墙规则
@@ -77,12 +68,10 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-aa3dd936a69e6a41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
     - 名称 按规则自定义
     - 目标 选择  网络中的所有实例
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-5d41f378dfb3395b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
     - 来源ip地址范围 0.0.0.0/0
     - 协议和端口 勾选 UDP 填写 500,4500，勾选 其他协议 填写 esp
@@ -95,9 +84,7 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-799f487ff32edc0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
     - 左侧菜单栏 ---> 网络 ---> VPC网络 ---> default
-
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-c8c9e22bcc877f46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -105,7 +92,6 @@
     
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-1b6096f064ffd3c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-    
     - 子网创建模式 选择 自动
     - 动态路由模式 选择 全局
     - 点击保存即可
@@ -118,9 +104,7 @@
 - ##### 点击创建负载平衡
 - ##### 直接点击继续
 
-
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-7fa29253d5a82bd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
     - 名称 按规则自定义填写
     - 选择 区域
@@ -128,7 +112,6 @@
     - 点击前端配置
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-e1b59226515f0105.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
     - 名称 按规则自定义填写
     - 端口 填写500-4500
@@ -142,11 +125,9 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-73b3b2990d84fac5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 - ##### 点击 SSH，会进入到远程终端页面
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1424124-123683109b120909.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 ### 7. 开始部署服务
 
@@ -230,11 +211,9 @@ zuoqianheng@instance-1:~$
 ```
 
 
-
 ### 8. 如何连接？
 - Mac、iOS设置可以直接在网络设置中找到VPN，添加对应的服务器、用户名、密码等数据即可访问。Windows 用户可以使用免费的 [Shrew Soft 客户端](https://www.shrew.net/download/vpn)。可以参考这里：[配置 IPsec/XAuth VPN 客户端](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients-xauth-zh.md)
 - 如果无法连接,请首先检查是否输入了正确的 VPN 登录凭证。
-
 
 
 ## Info
@@ -243,6 +222,7 @@ zuoqianheng@instance-1:~$
 - CSDN:https://blog.csdn.net/zuoqianheng
 - 简书：@EchoZuo
 - 电报：@echozuo
+
 
 ## 参考链接
 
