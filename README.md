@@ -216,12 +216,12 @@ zuoqianheng@instance-1:~$
 - 如果无法连接,请首先检查是否输入了正确的 VPN 登录凭证。
 
 
-## Info
-- Github：https://github.com/EchoZuo
+### Info
+- Blog：https://echozuo.github.io
+- jianshu：https://www.jianshu.com/u/3390ce71084e
+- CSDN：https://blog.csdn.net/zuoqianheng
 - Email: zuoqianheng@foxmail.com
-- CSDN:https://blog.csdn.net/zuoqianheng
-- 简书：@EchoZuo
-- 电报：@echozuo
+- Telegram：@echozuo
 
 
 ## 参考链接
